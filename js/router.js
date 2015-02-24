@@ -1,11 +1,11 @@
 ;(function(){
 
-  Backbone.todoRouter = Backbone.Router.extend({
+  Parse.todoRouter = Parse.Router.extend({
   
       initialize:function() {
-        this.collection= new Backbone.todoCollection()
+        this.collection= new Parse.todoCollection()
         
-         this.view = new Backbone.todoView({
+         this.view = new Parse.todoView({
            collection: this.collection
          
          })
@@ -27,7 +27,7 @@
         ])
          //this.collection.models[0].set('name', 'does homework')
         console.log('todo router')
-      Backbone.history.start();
+      Parse.history.start();
       },
       routes:{
         

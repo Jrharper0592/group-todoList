@@ -11,7 +11,8 @@ function app(){
         //js
         {url: "./bower_components/jquery/dist/jquery.min.js"} ,
         {url: "./bower_components/lodash/lodash.min.js"} ,
-        {url: "./bower_components/backbone/backbone.js"} ,
+        // {url: "./bower_components/backbone/backbone.js"} ,
+        {url: "./bower_components/parse-js-sdk/lib/parse.min.js"},
         {url: "./js/TemplateView.js"} ,
         {url: "./js/router.js"} ,
         {url: "./js/collection.js"} ,
@@ -22,7 +23,7 @@ function app(){
     ).then(function(){
         document.querySelector("html").style.opacity = 1;
         // start app?
-            new Backbone.todoRouter
+            new Parse.todoRouter
             // new Backbone.todoView
 
     })

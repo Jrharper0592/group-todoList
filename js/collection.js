@@ -1,15 +1,15 @@
 
 ;(function(){
 	
-  Backbone.todoModel = Backbone.Model.extend({
+  Parse.todoModel = Parse.Object.extend({
   
     
   
   });
   
-  Backbone.todoCollection =  Backbone.Collection.extend({
-    model: Backbone.todoModel
-  })
+  Parse.todoCollection =  Parse.Collection.extend({
+    model: Parse.todoModel
+  });
 
 	
 

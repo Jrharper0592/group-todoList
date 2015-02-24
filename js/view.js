@@ -1,5 +1,5 @@
 ;(function(){
-  Backbone.todoView = Backbone.TemplateView.extend({
+  Parse.todoView = Parse.TemplateView.extend({
     el:	".app-container",
     view: "todoTemplate",
     events:{
