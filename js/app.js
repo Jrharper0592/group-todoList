@@ -7,25 +7,35 @@ function app(){
     // load some scripts (uses promises :D)
     loader.load(
         //css
-        {url: "./dist/style.css"} ,
+        {url: "./dist/style.css"},
         //js
-        {url: "./bower_components/jquery/dist/jquery.min.js"} ,
-        {url: "./bower_components/lodash/lodash.min.js"} ,
-        // {url: "./bower_components/backbone/backbone.js"} ,
+        {url: "./bower_components/jquery/dist/jquery.min.js"},
+        {url: "./bower_components/lodash/lodash.min.js"},
+
+        // when using just Backbone, use this line
+        // {url: "./bower_components/backbone/backbone.js"},
+        // when using Parse, comment out the above line and uncomment the line below
         {url: "./bower_components/parse-js-sdk/lib/parse.min.js"},
-        {url: "./js/TemplateView.js"} ,
+
+        // when using React (and the plugin JSnoX), uncomment the following two lines
+        // {url: "./bower_components/react/react.min.js"},
+        // {url: "./bower_components/jsnox/index.js"},
+
+        // other stuff
+        {url: "./bower_components/pace/pace.min.js"},
+        {url: "./js/TemplateView.js"},
         {url: "./js/router.js"} ,
         {url: "./js/collection.js"} ,
         {url: "./js/view.js"}
-        // {url: "./bower_components/react/react.min.js"},
-        // {url: "./node_modules/jsonx/index.js"},
-        // {url: "./bower_components/pace/pace.min.js"},
     ).then(function(){
         document.querySelector("html").style.opacity = 1;
+        //connect parse
+        Parse.initialize("YuBWyXSvH3trSRnl8iRl9ZgTNBgLSLnBJNSIFaZc", "yIY64iGjywrTCQmdPBMbm6HnX1GO92SwR4oShXOm");
         // start app?
-            new Parse.todoRouter
+            new Parse.todoRouter()
             // new Backbone.todoView
 
     })
-
+        
+            
 }
